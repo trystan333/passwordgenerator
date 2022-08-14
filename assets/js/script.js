@@ -2,8 +2,6 @@ var upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
 var specialChars = "!@#$%&*()_+-=,./?{}[]|";
 var numericChars = "0123456789";
-var lengthInput;
-var finishedPass;
 var generateBtn = document.querySelector("#generate");
 
 
@@ -24,34 +22,50 @@ function generatePassword() {
   if (lengthInput < 8 || lengthInput > 128) {
     alert("Password must be more than 8 characters, and less than 129.");
     generatePassword();
-  }
+  };
 
-
+  var passChars = "";
   //prompt user to confrim char choices
   var confirmLower = confirm("Do you want to have lowercase characters?");
-  // if (confirmLower = true) {
-    
-  // }
+  if (confirmLower = true) {
+    passChars += lowerCaseChars;
+  } 
 
   var confirmUpper = confirm("Do you want to have uppercase characters?");
+  if (confirmUpper = true) {
+    passChars += upperCaseChars;
+  }  
 
   var confirmSpecial = confirm("Do you want to have special characters?");
+  if (confirmSpecial = true) {
+    passChars += specialChars;
+  } 
 
   var confirmNumeric = confirm("Do you want to have numeric characters?");
+  if (confirmNumeric = true) {
+    passChars += numericChars;
+  }
 
+  console.log(passChars);
+  return passChars;
+};
+//generate pass using user input
 
-
-
-
+function passInput() {
 
 
   
-  //generate pass using user input
-  //return generated password
-  //using confirms prompts and alerts
+}
 
 
 
-  // return password;
 
-};
+
+
+
+
+//return generated password
+
+
+
+
